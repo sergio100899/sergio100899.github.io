@@ -1,0 +1,68 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #121212;
+    --accent-color: #007bff;
+}
+
+body.dark {
+--bg-color: #121212;
+--text-color: #ffffff;
+--accent-color: #1e90ff;
+}
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+padding: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: var(--accent-color);
+color: white;
+}
+
+button#theme-toggle {
+background: none;
+border: none;
+font-size: 1.5rem;
+cursor: pointer;
+color: white;
+}
+
+main {
+padding: 2rem;
+}
+
+section {
+margin-bottom: 2rem;
+}
+
+.project {
+border: 1px solid var(--accent-color);
+padding: 1rem;
+border-radius: 8px;
+margin-top: 1rem;
+}
+
+a {
+color: var(--accent-color);
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+footer {
+text-align: center;
+padding: 1rem;
+background: var(--accent-color);
+color: white;
+}
