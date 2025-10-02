@@ -1,26 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.fade-in-section');
+const sections = document.querySelectorAll('.fade-in-section');
 
-    if (!sections) {
-        return;
-    }
+if (sections.length > 0) {
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  };
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        observer.observe(section);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
     });
-});
+  }, observerOptions);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+}
