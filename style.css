@@ -207,7 +207,7 @@ section li {
 .skills-category li svg {
   flex-shrink: 0;
   width: 18px;
-  height: auto;
+  height: 18px;
   fill: var(--text-muted);
   margin-top: 0.15rem; /* Fine-tune vertical alignment */
 }
@@ -236,6 +236,11 @@ section li {
   border-radius: 50%;
   transition: all 0.3s ease;
   border: 1px solid var(--border-color);
+}
+
+.social a svg {
+  width: 24px;
+  height: 24px;
 }
 
 .social a:hover {
