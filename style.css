@@ -103,6 +103,12 @@ h2 {
   color: var(--primary-orange);
 }
 
+h2::before {
+  content: '';
+  display: none; /* Oculto por defecto, visible en móvil */
+  transition: transform 0.3s ease;
+}
+
 .experience,
 .education {
   margin-bottom: 1.5rem;
@@ -298,6 +304,21 @@ footer p {
     font-size: 2rem;
   }
 
+  h2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h2::before {
+    content: '›';
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
   .social {
     flex-direction: column;
     align-items: flex-start;
@@ -306,6 +327,10 @@ footer p {
 
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+
+  section.active h2::before {
+    transform: rotate(90deg);
   }
 }
 
